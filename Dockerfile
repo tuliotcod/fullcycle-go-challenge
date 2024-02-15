@@ -1,15 +1,5 @@
-FROM golang:latest AS base
-
-WORKDIR /workspace
-
-COPY . .
-
-RUN go build main.go
-
-FROM scratch
-
+FROM golang:latest 
 WORKDIR /app
-
-COPY --from=base /workspace/main .
-
+COPY . .
+RUN go build main.go
 CMD [ "./main" ]
