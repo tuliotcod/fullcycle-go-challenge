@@ -1,1 +1,0 @@
-# fullcyle-go-challenge
